@@ -1,0 +1,1 @@
+cocos new [프로젝트명] -p [패키지경로] -l cpp
