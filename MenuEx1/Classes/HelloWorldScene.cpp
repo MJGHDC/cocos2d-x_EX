@@ -55,7 +55,7 @@ bool HelloWorld::init()
 	//this->addChild(pMenu);
 
 	// MenuEx2
-	auto pMenuItem = MenuItemImage::create("Images/btn-play-normal.png", "Images/btn-play-selected.png", CC_CALLBACK_1(HelloWorld::doClick, this));
+	MenuItemImage* pMenuItem = MenuItemImage::create(R"(Images/btn-play-normal.png)", R"(Images/btn-play-selected.png)", CC_CALLBACK_1(HelloWorld::doClick, this));
 	pMenuItem->setPosition(Vec2(480, 320));
 	pMenuItem->setAnchorPoint(Vec2(1, 1));
 
@@ -79,14 +79,46 @@ bool HelloWorld::init()
 	this->addChild(pMenu);
 
 	// MenuEx4
+	auto pMenuItem4 = MenuItemFont::create(" Menu-1 ", CC_CALLBACK_1(HelloWorld::doClickSpriteTag, this));
+	pMenuItem4->setColor(Color3B::BLACK);
 
+	auto pMenuItem5 = MenuItemFont::create(" Menu-2 ", CC_CALLBACK_1(HelloWorld::doClickSpriteTag, this));
+	pMenuItem5->setColor(Color3B::BLACK);
+
+	pMenuItem4->setTag(1);
+	pMenuItem5->setTag(2);
+
+	auto pMenuSprite = Menu::create(pMenuItem4, pMenuItem5, nullptr);
+	pMenuSprite->setPosition(Vec2(240, 220));
+	pMenuSprite->alignItemsHorizontally();
+	this->addChild(pMenuSprite);
 
 	return true;
 }
 
+void HelloWorld::doClickSpriteTag(Ref* pSender)
+{
+	auto tItem = static_cast<MenuItem*>(pSender);
+	int i = tItem->getTag();
+
+	if (i == 1)
+	{
+		auto pMan = Sprite::create("Images/grossini.png");
+		pMan->setPosition(Vec2(100, 160));
+		pMan->setTag(11);
+
+		this->addChild(pMan);
+	}
+	else
+	{
+		auto pMan = static_cast<Sprite*>(getChildByTag(11));
+		this->removeChild(pMan, true);
+	}
+}
+
 void HelloWorld::doClickTag(Ref * pSender)
 {
-	auto tItem = (MenuItem*)pSender;
+	auto tItem = static_cast<MenuItem*>(pSender);
 
 	int i = tItem->getTag();
 

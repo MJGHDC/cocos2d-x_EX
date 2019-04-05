@@ -36,8 +36,9 @@ class HelloWorld : public cocos2d::Scene
 public:
     static cocos2d::Scene* createScene();
 
-    virtual bool init();
+    virtual bool init() override;
 
+	void doClickSpriteTag(Ref* pSender);
 	void doClickTag(Ref* pSender);
 	void doClick(Ref* pSender);
 	void doClick1(Ref* pSender);
