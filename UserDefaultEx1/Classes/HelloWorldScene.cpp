@@ -45,6 +45,92 @@ bool HelloWorld::init()
 	auto wlayer = LayerColor::create(Color4B(255, 255, 255, 255));
 	this->addChild(wlayer);
 
+	std::string vString = UserDefault::getInstance()->getStringForKey("str_key");
+	log("string is %s", vString.c_str());
+
+	int vInteger = UserDefault::getInstance()->getIntegerForKey("int_key");
+	log("integer is %d", vInteger);
+
+	float vFloat = UserDefault::getInstance()->getFloatForKey("float_key");
+	log("float is %f", vFloat);
+
+	double vDouble = UserDefault::getInstance()->getDoubleForKey("double_key");
+	log("double is %f", vDouble);
+
+	bool b = UserDefault::getInstance()->getBoolForKey("bool_key");
+	if (b)
+	{
+		log("bool is true");
+	}
+	else
+	{
+		log("bool is false");
+	}
+
+
+	log("********************** init value ***********************");
+
+	UserDefault::getInstance()->setStringForKey("str_key", "value1");
+	UserDefault::getInstance()->setIntegerForKey("int_key", 10);
+	UserDefault::getInstance()->setFloatForKey("float_key", 2.3f);
+	UserDefault::getInstance()->setDoubleForKey("double_key", 2.4f);
+	UserDefault::getInstance()->setBoolForKey("bool_key", true);
+
+	vString = UserDefault::getInstance()->getStringForKey("str_key");
+	log("string is %s", vString.c_str());
+
+	vInteger = UserDefault::getInstance()->getIntegerForKey("int_key");
+	log("integer is %d", vInteger);
+
+	vFloat = UserDefault::getInstance()->getFloatForKey("float_key");
+	log("float is %f", vFloat);
+
+	vDouble = UserDefault::getInstance()->getDoubleForKey("double_key");
+	log("double is %f", vDouble);
+
+	b = UserDefault::getInstance()->getBoolForKey("bool_key");
+	if (b)
+	{
+		log("bool is true");
+	}
+	else
+	{
+		log("bool is false");
+	}
+
+
+	log("********************** after change value ***********************");
+
+	UserDefault::getInstance()->setStringForKey("str_key", "value2");
+	UserDefault::getInstance()->setIntegerForKey("int_key", 11);
+	UserDefault::getInstance()->setFloatForKey("float_key", 2.5f);
+	UserDefault::getInstance()->setDoubleForKey("double_key", 2.6f);
+	UserDefault::getInstance()->setBoolForKey("bool_key", false);
+
+	UserDefault::getInstance()->flush();
+
+	vString = UserDefault::getInstance()->getStringForKey("str_key");
+	log("string is %s", vString.c_str());
+
+	vDouble = UserDefault::getInstance()->getDoubleForKey("double_key");
+	log("double is %f", vDouble);
+
+	vInteger = UserDefault::getInstance()->getIntegerForKey("int_key");
+	log("integer is %d", vInteger);
+
+	vFloat = UserDefault::getInstance()->getFloatForKey("float_key");
+	log("float is %f", vFloat);
+
+	b = UserDefault::getInstance()->getBoolForKey("bool_key");
+	if (b)
+	{
+		log("bool is true");
+	}
+	else
+	{
+		log("bool is false");
+	}
+
 	return true;
 }
 
