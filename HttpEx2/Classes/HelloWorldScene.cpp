@@ -1,0 +1,78 @@
+﻿/****************************************************************************
+ Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
+ 
+ http://www.cocos2d-x.org
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+ ****************************************************************************/
+
+#include "HelloWorldScene.h"
+#include "SimpleAudioEngine.h"
+#include "network/HttpClient.h"
+
+USING_NS_CC;
+using namespace cocos2d::network;
+
+Scene *HelloWorld::createScene()
+{
+	return HelloWorld::create();
+}
+
+// on "init" you need to initialize your instance
+bool HelloWorld::init()
+{
+	//////////////////////////////
+	// 1. super init first
+	if (!Scene::init())
+	{
+		return false;
+	}
+
+	auto wlayer = LayerColor::create(Color4B(255, 255, 255, 255));
+	this->addChild(wlayer);
+
+	auto request = new HttpRequest();
+	request->setUrl("http://www.cocos2d-x.org/images/logo.png");
+	request->setRequestType(HttpRequest::Type::GET);
+	request->setResponseCallback([&](HttpClient * sender, HttpResponse * response) 
+	{
+		if (!response->isSucceed()) {
+			log("error");
+			return;
+		}
+
+		std::vector<char>* buffer = response->getResponseData();
+		std::string path = FileUtils::getInstance()->getWritablePath() + "image.png";
+		log("%s", path.c_str());
+		FILE* fp = fopen(path.c_str(), "wb");
+		fwrite(buffer->data(), 1, buffer->size(), fp);
+		fclose(fp);
+
+		auto size = Director::getInstance()->getWinSize();
+		auto sprite = Sprite::create(path);
+		sprite->setPosition(size / 2);
+		this->addChild(sprite);
+	});
+
+	network::HttpClient::getInstance()->send(request);
+	request->release();
+
+
+	return true;
+}
