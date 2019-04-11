@@ -67,16 +67,16 @@ bool HelloWorld::init()
 
 void HelloWorld::tableCellTouched(TableView* table, TableViewCell* cell)
 {
-	log("Tag : %d\nCell touched at index: %ld",
-		table->getTag(),
-		cell->getIdx());
+	log("Tag : %d\nCell touched at index: %ld", table->getTag(), cell->getIdx());
 }
 
 Size HelloWorld::tableCellSizeForIndex(TableView* table, ssize_t idx)
 {
-	if (idx == 2) {
+	if (idx == 2) 
+	{
 		return Size(100, 100);
 	}
+
 	return Size(60, 60);
 }
 
@@ -85,7 +85,8 @@ TableViewCell* HelloWorld::tableCellAtIndex(TableView* table, ssize_t idx)
 	auto string = String::createWithFormat("%ld", idx);
 
 	TableViewCell* cell = table->dequeueCell();
-	if (!cell) {
+	if (!cell) 
+	{
 		cell = new CustomTableViewCell();
 		cell->autorelease();
 
@@ -105,7 +106,6 @@ TableViewCell* HelloWorld::tableCellAtIndex(TableView* table, ssize_t idx)
 		auto label = (Label*)cell->getChildByTag(123);
 		label->setString(string->getCString());
 	}
-
 
 	return cell;
 }
