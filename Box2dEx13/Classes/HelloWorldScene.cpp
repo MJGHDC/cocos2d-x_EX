@@ -120,7 +120,7 @@ void HelloWorld::setBox2dWorld()
 	jd1.maxMotorTorque = 20.0f;
 	jd1.enableMotor = true;
 	jd1.frequencyHz = 4.0f;
-	jd1.dampingRatio = 0.7f;
+	jd1.dampingRatio = 0.5f;
 
 	b2WheelJointDef jd2;
 	jd2.Initialize(body0, body2, body2->GetPosition(), axis);
@@ -128,7 +128,7 @@ void HelloWorld::setBox2dWorld()
 	jd2.maxMotorTorque = 20.0f;
 	jd2.enableMotor = true;
 	jd2.frequencyHz = 4.0f;
-	jd2.dampingRatio = 1.0f;
+	jd2.dampingRatio = 0.5f;
 
 	m_spring1 = (b2WheelJoint*)_world->CreateJoint(&jd1);
 	m_spring2 = (b2WheelJoint*)_world->CreateJoint(&jd2);
@@ -201,12 +201,12 @@ void HelloWorld::tick(float deltaTime)
 	}
 
 	b2Vec2 p = body0->GetPosition();
-	if (p.x < 1.6)
+	if (p.x < 7.6)
 	{
 		m_spring1->SetMotorSpeed(-30.0f);
 		m_spring2->SetMotorSpeed(-30.0f);
 	}
-	else if (p.x > 13.4)
+	else if (p.x > 8.4)
 	{
 		m_spring1->SetMotorSpeed(30.0f);
 		m_spring2->SetMotorSpeed(30.0f);
