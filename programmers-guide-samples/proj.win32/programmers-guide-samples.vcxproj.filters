@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Chapter2">
+      <UniqueIdentifier>{ed3edba7-01a7-4af5-bd54-816a1db42def}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Chapter3">
+      <UniqueIdentifier>{15bb349d-f1b3-41c3-86e9-ac2d0e60e84e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Chapter4">
+      <UniqueIdentifier>{d4d45743-0b9d-4293-99e8-77a463cbd601}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Chapter5">
+      <UniqueIdentifier>{f30003f0-12af-4e6f-a063-fee761cfc634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Chapter6">
+      <UniqueIdentifier>{b381ee3a-5492-4b7f-aa77-9b5a214ad2dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Chapter7">
+      <UniqueIdentifier>{cc122eaa-0374-4024-89e3-6f2272632b39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Chapter9">
+      <UniqueIdentifier>{c7cfac0d-b414-4f66-a144-9313227b6c46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Chapter12">
+      <UniqueIdentifier>{d3b876cd-be22-4569-b431-a61d295da709}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Chapter13">
+      <UniqueIdentifier>{ec3422b4-855a-4208-926b-c2c70317d53f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GLES-Render.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\MainScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter2\Chapter2.cpp">
+      <Filter>src\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter2\Chapter2Level1.cpp">
+      <Filter>src\Chapter2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter3\Chapter3.cpp">
+      <Filter>src\Chapter3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter4\Chapter4.cpp">
+      <Filter>src\Chapter4</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter5\Chapter5.cpp">
+      <Filter>src\Chapter5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter6\Chapter6.cpp">
+      <Filter>src\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter6\Chapter6_1.cpp">
+      <Filter>src\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter6\Chapter6_2.cpp">
+      <Filter>src\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter6\Chapter6_3.cpp">
+      <Filter>src\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter6\Chapter6_4.cpp">
+      <Filter>src\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter6\Chapter6_5.cpp">
+      <Filter>src\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter6\Chapter6_6.cpp">
+      <Filter>src\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter6\Chapter6_7.cpp">
+      <Filter>src\Chapter6</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter7\Chapter7.cpp">
+      <Filter>src\Chapter7</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter7\Chapter7_1.cpp">
+      <Filter>src\Chapter7</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter7\Chapter7_2.cpp">
+      <Filter>src\Chapter7</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter7\Chapter7_3.cpp">
+      <Filter>src\Chapter7</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_1.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_10.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_2.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_3.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_4.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_5.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_6.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_7.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_8.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\Chapter9_9.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter9\DrawNode3D.cpp">
+      <Filter>src\Chapter9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter12\Chapter12.cpp">
+      <Filter>src\Chapter12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\chapter13\Chapter13.cpp">
+      <Filter>src\Chapter13</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GLES-Render.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\MainScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter2\Chapter2.h">
+      <Filter>src\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter2\Chapter2Level1.h">
+      <Filter>src\Chapter2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter3\Chapter3.h">
+      <Filter>src\Chapter3</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter4\Chapter4.h">
+      <Filter>src\Chapter4</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter5\Chapter5.h">
+      <Filter>src\Chapter5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter6\Chapter6.h">
+      <Filter>src\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter6\Chapter6_1.h">
+      <Filter>src\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter6\Chapter6_2.h">
+      <Filter>src\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter6\Chapter6_3.h">
+      <Filter>src\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter6\Chapter6_4.h">
+      <Filter>src\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter6\Chapter6_5.h">
+      <Filter>src\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter6\Chapter6_6.h">
+      <Filter>src\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter6\Chapter6_7.h">
+      <Filter>src\Chapter6</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter7\Chapter7.h">
+      <Filter>src\Chapter7</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter7\Chapter7_1.h">
+      <Filter>src\Chapter7</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter7\Chapter7_2.h">
+      <Filter>src\Chapter7</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter7\Chapter7_3.h">
+      <Filter>src\Chapter7</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_1.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_10.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_2.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_3.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_4.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_5.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_6.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_7.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_8.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\Chapter9_9.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter9\DrawNode3D.h">
+      <Filter>src\Chapter9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter12\Chapter12.h">
+      <Filter>src\Chapter12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\chapter13\Chapter13.h">
+      <Filter>src\Chapter13</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
