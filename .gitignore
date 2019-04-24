@@ -180,5 +180,8 @@ tests/*/project/proj.android/.settings/org.eclipse.buildship.core.prefs
 tmp/
 temp/
 
+/*/proj.android
+/*/proj.ios_mac
+/*/proj.linux
 /*/cocos2d
 /*/Resources
