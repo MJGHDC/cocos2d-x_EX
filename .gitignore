@@ -183,5 +183,6 @@ temp/
 /*/proj.android
 /*/proj.ios_mac
 /*/proj.linux
+
 /*/cocos2d
-/*/Resources
+#/*/Resources
